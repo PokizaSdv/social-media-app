@@ -15,5 +15,17 @@
   "bugs": {
     "url": "https://github.com/PokizaSdv/social-media-app/issues"
   },
-  "homepage": "https://github.com/PokizaSdv/social-media-app#readme"
+  "homepage": "https://github.com/PokizaSdv/social-media-app#readme",
+  "dependencies": {
+    "@prisma/client": "^5.6.0",
+    "bcryptjs": "^2.4.3",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "prisma": "^5.6.0"
+  }
 }
