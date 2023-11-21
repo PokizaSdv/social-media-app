@@ -1,0 +1,19 @@
+{
+  "name": "social-media-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PokizaSdv/social-media-app.git"
+  },
+  "author": "pokiza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PokizaSdv/social-media-app/issues"
+  },
+  "homepage": "https://github.com/PokizaSdv/social-media-app#readme"
+}
