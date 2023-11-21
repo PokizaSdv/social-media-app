@@ -12,7 +12,7 @@ enum AccountStatus {
     INACTIVE
 }
 
-model Admin {
+model User {
     id                               String        @id @default(auto()) @map("_id") @db.ObjectId
     firstName                        String
     lastName                         String
