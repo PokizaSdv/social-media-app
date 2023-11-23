@@ -5,7 +5,7 @@ import { bcrypt } from "../utils/bcrypt.js";
 
 
 class UserService {
-    signUp = async(input) => {
+    signUp = async (input) => {
         const hashedPassword = await bcrypt.hash(input.password);
         const activationToken = crypto.createToken();
         const hashedActivationToken = crypto.hash(activationToken);
@@ -21,9 +21,10 @@ class UserService {
             }
         });
 
-        
         await mailer.sendActivationMail(input.email, activationToken);
-    }
+    };
+
+
 }
 
 export const userService = new UserService();
