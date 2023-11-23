@@ -18,6 +18,32 @@ class UserController {
             message: "Success"
         })
     });
+
+    login = catchAsync(async (req, res) => {
+        const { body } = req;
+        const input = {
+            email: body.email,
+            password: body.password
+        };
+        const jwt = await userService.login(input);
+        res.status(200).json({
+            token: jwt
+        });
+    });
+    activate = catchAsync(async (req, res) => {
+        const {
+            query: { activationToken }
+        } = req;
+
+        if (!activationToken) {
+            throw new CustomError("Activation Token is missing", 400);
+        }
+        await userService.activate(activationToken);
+
+        res.status(200).json({
+            message: "Success"
+        });
+    });
 }
 
 export const userController = new UserController();
